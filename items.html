@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My WhatsApp Shop</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styleitems.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">MY<span>SHOP</span></div>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-basket"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 style="margin-bottom: 25px; text-align: center;">Hamari Latest Products</h2>
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <img src="fanta.png" alt="product">
+                <div class="details">
+                    <h3>Fanta-Cold Drink</h3>
+                    <p class="price">₹40</p>
+                    <button class="add-btn" onclick="addToCart('Fanta-Cold Drink', 40)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="lays.png" alt="product">
+                <div class="details">
+                    <h3>Lays</h3>
+                    <p class="price">₹10</p>
+                    <button class="add-btn" onclick="addToCart('Lays', 10)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="sanickers.png" alt="product">
+                <div class="details">
+                    <h3>Sanickers</h3>
+                    <p class="price">₹10</p>
+                    <button class="add-btn" onclick="addToCart('Sanickers', 10)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="sprite.png" alt="product">
+                <div class="details">
+                    <h3>Sanickers</h3>
+                    <p class="price">₹40</p>
+                    <button class="add-btn" onclick="addToCart('sprite', 40)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="sprite.png" alt="product">
+                <div class="details">
+                    <h3>Sanickers</h3>
+                    <p class="price">₹40</p>
+                    <button class="add-btn" onclick="addToCart('sprite', 40)">Add to Cart</button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </main>
+
+    <div id="cart-sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Aapka Cart</h3>
+            <i class="fas fa-times" style="cursor:pointer" onclick="toggleCart()"></i>
+        </div>
+        <div id="cart-items"></div>
+        <div class="sidebar-footer">
+            <div class="total-row">
+                <span>Total:</span>
+                <span id="cart-total">₹0</span>
+            </div>
+            <button class="checkout-btn" onclick="sendWhatsAppOrder()">
+                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <script src="javaitem.js"></script>
+</body>
+</html>
